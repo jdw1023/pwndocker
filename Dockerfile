@@ -119,6 +119,9 @@ COPY --from=skysider/glibc_builder32:2.35 /glibc/2.35/32 /glibc/2.35/32
 COPY --from=skysider/glibc_builder64:2.36 /glibc/2.36/64 /glibc/2.36/64
 COPY --from=skysider/glibc_builder32:2.36 /glibc/2.36/32 /glibc/2.36/32
 
+COPY --from=jd00/glibc_builder64:2.37 /glibc/2.37/64 /glibc/2.37/64
+COPY --from=jd00/glibc_builder32:2.37 /glibc/2.37/32 /glibc/2.37/32
+
 COPY linux_server linux_server64  /ctf/
 
 RUN chmod a+x /ctf/linux_server /ctf/linux_server64
